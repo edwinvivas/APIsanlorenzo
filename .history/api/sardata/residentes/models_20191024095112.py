@@ -89,9 +89,12 @@ class Vehiculo(models.Model):
 
 class Parqueadero(models.Model):
     """Model definition for Vehiculo."""
-    codigo = models.CharField(max_length=10, primary_key=True)
     propiedad = models.ForeignKey(Propiedad, on_delete=models.CASCADE, null=True)
+    placa = models.CharField(max_length=9 ,null=True)
+    marca = models.CharField(max_length=20 ,null=True)
     
+    color = models.CharField(max_length=20 ,null=True)
+    garage = models.CharField(max_length=10 ,null=True)
     class Meta:
         """Meta definition for Vehiculo."""
 
@@ -99,4 +102,5 @@ class Parqueadero(models.Model):
         verbose_name_plural = 'Parqueaderos'
 
     def __str__(self):
-        return self.codigo
+        """Unicode representation of Vehiculo."""
+        pass

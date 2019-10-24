@@ -3,8 +3,7 @@ from .models import (
     TipoPropiedad, 
     Propiedad,
     Residente,
-    Vehiculo,
-    Parqueadero
+    Vehiculo
 )
 
 class TipoPropiedadSerializer(serializers.ModelSerializer):
@@ -27,8 +26,5 @@ class VehiculoSerializer(serializers.ModelSerializer):
         model = Vehiculo
         fields = "__all__"
 
-class ParqueaderoSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Parqueadero
-        fields = "__all__"
+
 

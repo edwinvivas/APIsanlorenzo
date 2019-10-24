@@ -47,7 +47,7 @@ class VehiculoViewSet(viewsets.ModelViewSet):
     filter_fields = '__all__'
     ordering_fields = '__all__'
 
-class ParqueaderoViewSet(viewsets.ModelViewSet):
+class parqueaderoViewSet(viewsets.ModelViewSet):
     queryset = Parqueadero.objects.all()
     serializer_class = ParqueaderoSerializer
     filter_fields = '__all__'

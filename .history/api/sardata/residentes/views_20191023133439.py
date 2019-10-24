@@ -3,15 +3,13 @@ from .serializers import (
    PropiedadSerializer,
    TipoPropiedadSerializer,
    ResidenteSerializer,
-    VehiculoSerializer,
-    ParqueaderoSerializer
+    VehiculoSerializer
 )
 from .models import (
     Propiedad,
     TipoPropiedad,
     Residente,
-    Vehiculo,
-    Parqueadero
+    Vehiculo
     )
 from rest_framework import viewsets
 from rest_framework.pagination import PageNumberPagination
@@ -47,8 +45,4 @@ class VehiculoViewSet(viewsets.ModelViewSet):
     filter_fields = '__all__'
     ordering_fields = '__all__'
 
-class ParqueaderoViewSet(viewsets.ModelViewSet):
-    queryset = Parqueadero.objects.all()
-    serializer_class = ParqueaderoSerializer
-    filter_fields = '__all__'
-    ordering_fields = '__all__'
+  

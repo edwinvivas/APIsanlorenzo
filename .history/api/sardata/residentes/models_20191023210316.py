@@ -87,16 +87,3 @@ class Vehiculo(models.Model):
         """Unicode representation of Vehiculo."""
         pass
 
-class Parqueadero(models.Model):
-    """Model definition for Vehiculo."""
-    codigo = models.CharField(max_length=10, primary_key=True)
-    propiedad = models.ForeignKey(Propiedad, on_delete=models.CASCADE, null=True)
-    
-    class Meta:
-        """Meta definition for Vehiculo."""
-
-        verbose_name = 'Parqueadero'
-        verbose_name_plural = 'Parqueaderos'
-
-    def __str__(self):
-        return self.codigo
